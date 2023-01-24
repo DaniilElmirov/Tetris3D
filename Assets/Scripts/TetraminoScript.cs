@@ -1,11 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
-//using System.Numerics;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TetraminoScript : MonoBehaviour
 {
@@ -69,8 +63,6 @@ public class TetraminoScript : MonoBehaviour
         CheckSwipe();
 
         MoveDown();
-
-        //CheckUserInput();
     }
 
     private void CheckSwipe()
@@ -176,81 +168,6 @@ public class TetraminoScript : MonoBehaviour
         tapPosition = Vector2.zero;
         swipeDelta = Vector2.zero;
     }
-
-    //void CheckUserInput()
-    //{
-
-    //    if (Input.GetKeyDown(KeyCode.RightArrow))
-    //    {
-    //        transform.position += new Vector3(1, 0);
-
-    //        if (CheckIsValidPosition())
-    //        {
-    //            FindObjectOfType<GameScript>().UpdateBorder(this);
-    //        }
-    //        else
-    //        {
-    //            transform.position += new Vector3(-1, 0, 0);
-    //        }
-    //    }
-
-    //    else if (Input.GetKeyDown(KeyCode.LeftArrow))
-    //    {
-    //        transform.position += new Vector3(-1, 0, 0);
-
-    //        if (CheckIsValidPosition())
-    //        {
-    //            FindObjectOfType<GameScript>().UpdateBorder(this);
-    //        }
-    //        else
-    //        {
-    //            transform.position += new Vector3(1, 0, 0);
-    //        }
-    //    }
-
-    //    else if (Input.GetKeyDown(KeyCode.UpArrow))
-    //    {
-    //        transform.Rotate(0, 0, 90);
-
-    //        if (CheckIsValidPosition())
-    //        {
-    //            FindObjectOfType<GameScript>().UpdateBorder(this);
-    //        }
-    //        else
-    //        {
-    //            transform.Rotate(0, 0, -90);
-    //        }
-    //    }
-
-    //    else if (Input.GetKeyDown(KeyCode.DownArrow) || Time.time - fall >= fallSpeed)
-    //    {
-    //        transform.position += new Vector3(0, -1, 0);
-
-    //        if (CheckIsValidPosition())
-    //        {
-    //            FindObjectOfType<GameScript>().UpdateBorder(this);
-    //        }
-    //        else
-    //        {
-    //            transform.position += new Vector3(0, 1, 0);
-
-    //            FindObjectOfType<GameScript>().DeleteRow();
-
-    //            if (FindObjectOfType<GameScript>().CheckIsAboveBorder(this))
-    //            {
-    //                FindObjectOfType<GameScript>().GameOver();
-    //            }
-
-    //            FindObjectOfType<GameScript>().SpawnNextTetramino();
-
-    //            GameScript.currentScore += individualScore;
-
-    //            enabled = false;
-    //        }
-
-    //        fall = Time.time;
-    //    }
-    //}
 
     void MoveDown()
     {
